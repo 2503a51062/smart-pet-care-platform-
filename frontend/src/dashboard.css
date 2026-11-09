@@ -1,0 +1,161 @@
+.dashboard-page {
+  min-height: 100vh;
+  background: #f0f5ed;
+  font-family: Arial, sans-serif;
+  color: #244b40;
+}
+
+.dashboard-header {
+  background: white;
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-brand {
+  font-size: 25px;
+  font-weight: bold;
+  color: #238b70;
+}
+
+.logout-button {
+  background: #238b70;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background: #176b56;
+}
+
+.dashboard-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 45px 25px;
+}
+
+.welcome-section {
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  margin-bottom: 35px;
+}
+
+.welcome-section h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  color: #244b40;
+}
+
+.welcome-section p {
+  font-size: 17px;
+  color: #777;
+  line-height: 1.6;
+}
+
+.dashboard-summary {
+  margin-bottom: 25px;
+}
+
+.dashboard-summary h2 {
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.dashboard-summary p {
+  color: #777;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.dashboard-card {
+  background: white;
+  padding: 28px;
+  border-radius: 22px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}
+
+.dashboard-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.dashboard-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.dashboard-card p {
+  color: #777;
+  line-height: 1.5;
+  min-height: 48px;
+}
+
+.dashboard-card-button {
+  margin-top: 15px;
+  padding: 11px 22px;
+  background: #238b70;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.dashboard-card-button:hover {
+  background: #176b56;
+}
+
+.mint {
+  border-top: 5px solid #75c9a8;
+}
+
+.peach {
+  border-top: 5px solid #f2b59c;
+}
+
+.lavender {
+  border-top: 5px solid #b9a5df;
+}
+
+.yellow {
+  border-top: 5px solid #edce79;
+}
+
+.blue {
+  border-top: 5px solid #8bbbe0;
+}
+
+.dashboard-footer {
+  text-align: center;
+  padding: 45px 10px 20px;
+  color: #888;
+}
+
+@media (max-width: 600px) {
+  .welcome-section {
+    padding: 25px;
+  }
+
+  .welcome-section h1 {
+    font-size: 25px;
+  }
+
+  .dashboard-brand {
+    font-size: 19px;
+  }
+}

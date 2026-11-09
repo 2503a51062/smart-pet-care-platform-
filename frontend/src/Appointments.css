@@ -1,0 +1,140 @@
+.appointments-page {
+  min-height: 100vh;
+  background: #f0f5ed;
+  font-family: Arial, sans-serif;
+  color: #244b40;
+}
+
+.appointments-header {
+  background: white;
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.appointments-header h2 {
+  color: #238b70;
+}
+
+.appointments-header button,
+.appointment-form-card button,
+.appointment-card button {
+  background: #238b70;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.appointments-header button:hover,
+.appointment-form-card button:hover,
+.appointment-card button:hover {
+  background: #176b56;
+}
+
+.appointments-content {
+  max-width: 1100px;
+  margin: auto;
+  padding: 35px 20px;
+}
+
+.appointment-form-card,
+.appointment-list-section {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+.appointment-form-card h2,
+.appointment-list-section h2 {
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+.appointment-form-card form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+}
+
+.appointment-form-card label {
+  font-weight: bold;
+  align-self: end;
+}
+
+.appointment-form-card input,
+.appointment-form-card select,
+.appointment-form-card textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #d5dfd9;
+  border-radius: 10px;
+  background: white;
+  color: #222;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.appointment-form-card textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.appointment-form-card form button {
+  grid-column: 1 / -1;
+}
+
+.appointment-message {
+  margin-top: 18px;
+  color: #238b70;
+  font-weight: bold;
+}
+
+.appointment-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.appointment-card {
+  background: #f8fbf8;
+  border: 1px solid #e0ebe3;
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.appointment-card h3 {
+  color: #238b70;
+}
+
+.appointment-card p {
+  color: #666;
+  line-height: 1.5;
+}
+
+.appointment-card button:last-child {
+  background: #d96868;
+  margin-left: 8px;
+}
+
+.appointment-card button:last-child:hover {
+  background: #b94e4e;
+}
+
+@media (max-width: 600px) {
+  .appointment-form-card form {
+    grid-template-columns: 1fr;
+  }
+
+  .appointments-header {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+}

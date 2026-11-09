@@ -1,0 +1,153 @@
+.mypets-page {
+  min-height: 100vh;
+  background: #f0f5ed;
+  font-family: Arial, sans-serif;
+  color: #244b40;
+}
+
+.mypets-header {
+  background: white;
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.mypets-header h2 {
+  color: #238b70;
+}
+
+.mypets-header button,
+.pet-form-card button,
+.pet-card button {
+  background: #238b70;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.mypets-header button:hover,
+.pet-form-card button:hover,
+.pet-card button:hover {
+  background: #176b56;
+}
+
+.mypets-content {
+  max-width: 1100px;
+  margin: auto;
+  padding: 35px 20px;
+}
+
+.pet-form-card,
+.pet-list-section {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+.pet-form-card h2,
+.pet-list-section h2 {
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+.pet-form-card form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+}
+
+.pet-form-card label {
+  font-weight: bold;
+  align-self: end;
+}
+
+.pet-form-card input,
+.pet-form-card select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #d5dfd9;
+  border-radius: 10px;
+  background: white;
+  color: #222;
+  font-size: 15px;
+}
+
+.pet-form-card form button {
+  grid-column: 1 / -1;
+  margin-top: 10px;
+}
+
+.pet-message {
+  margin-top: 18px;
+  color: #238b70;
+  font-weight: bold;
+}
+
+.pet-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.pet-card {
+  background: #f8fbf8;
+  border: 1px solid #e0ebe3;
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.pet-emoji {
+  font-size: 38px;
+}
+
+.pet-card h3 {
+  color: #238b70;
+}
+
+.pet-card p {
+  color: #666;
+}
+
+.pet-card button {
+  margin-top: 10px;
+  background: #d96868;
+}
+
+.pet-card button:hover {
+  background: #b94e4e;
+}
+
+@media (max-width: 600px) {
+  .pet-form-card form {
+    grid-template-columns: 1fr;
+  }
+
+  .mypets-header {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+}
+.edit-pet-button {
+  background: #e5a84b !important;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.edit-pet-button:hover {
+  background: #c78b2f !important;
+}
+
+.cancel-edit-button {
+  background: #777 !important;
+}
+
+.cancel-edit-button:hover {
+  background: #555 !important;
+}
