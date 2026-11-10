@@ -1,6 +1,6 @@
 
 import { useState } from 'react'
-import './Dashboard.css'
+import './dashboard.css'
 import MyPets from './Mypets'
 import Appointments from './Appointments'
 import Vaccinations from './Vaccinations'
