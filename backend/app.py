@@ -1,9 +1,12 @@
 from flask import Flask, jsonify, request
 from werkzeug.security import generate_password_hash, check_password_hash
-from db import get_db_connection
+from db import get_db_connection, create_all_tables
 from chatbot import get_chatbot_response
 
 app = Flask(__name__)
+
+# Create database tables when the application starts
+create_all_tables()
 
 
 # ---------------- CORS CONFIGURATION ----------------

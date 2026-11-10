@@ -146,3 +146,15 @@ def create_chat_history_table():
     connection.close()
 
 
+def create_all_tables():
+    create_users_table()
+    create_pets_table()
+    create_appointments_table()
+    create_vaccinations_table()
+    create_medical_records_table()
+    create_chat_history_table()
+
+    print("All database tables created successfully!")
+
+
+
