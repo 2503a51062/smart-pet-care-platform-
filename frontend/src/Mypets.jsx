@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react'
-import './MyPets.css'
+import './myPets.css'
 
 function MyPets({ user, onBack }) {
   const [pets, setPets] = useState([])
