@@ -131,7 +131,7 @@ function MedicalRecords({ user, onBack }) {
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/medical-records/${recordId}`
+        `${import.meta.env.VITE_API_URL}/api/medical-records/${recordId}`,
         { method: 'DELETE' }
       )
 
