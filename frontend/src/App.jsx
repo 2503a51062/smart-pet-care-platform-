@@ -2,11 +2,13 @@
 import { useState } from 'react'
 import './App.css'
 import Login from './login'
+import Register from './Register'
 import Dashboard from './dashboard'
 import AdminDashboard from './AdminDashboard'
 
 function App() {
   const [showLogin, setShowLogin] = useState(false)
+  const [showRegister, setShowRegister] = useState(false)
   const [user, setUser] = useState(null)
 
   const handleLogin = (userData) => {
@@ -16,6 +18,7 @@ function App() {
   const handleLogout = () => {
     setUser(null)
     setShowLogin(false)
+    setShowRegister(false)
   }
 
   if (user) {
@@ -36,8 +39,36 @@ function App() {
     )
   }
 
+  if (showRegister) {
+    return (
+      <Register
+        onRegister={() => {
+          setShowRegister(false)
+          setShowLogin(true)
+        }}
+        onShowLogin={() => {
+          setShowRegister(false)
+          setShowLogin(true)
+        }}
+      />
+    )
+  }
+
   if (showLogin) {
-    return <Login onLogin={handleLogin} />
+    return (
+      <>
+        <Login onLogin={handleLogin} />
+        <p style={{ textAlign: 'center' }}>
+          Don't have an account?{' '}
+          <button onClick={() => {
+            setShowLogin(false)
+            setShowRegister(true)
+          }}>
+            Register
+          </button>
+        </p>
+      </>
+    )
   }
 
   return (
@@ -53,6 +84,13 @@ function App() {
           className="login-button"
         >
           Get Started
+        </button>
+
+        <button
+          onClick={() => setShowRegister(true)}
+          className="login-button"
+        >
+          Create Account
         </button>
       </header>
     </div>
