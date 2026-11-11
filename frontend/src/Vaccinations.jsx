@@ -16,7 +16,7 @@ function Vaccinations({ user, onBack }) {
   const loadPets = async () => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/api/pets/${user.user_id}`
+        `${import.meta.env.VITE_API_URL}/api/pets/${user.user_id}`
       )
       const data = await response.json()
 
@@ -38,7 +38,7 @@ function Vaccinations({ user, onBack }) {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/api/vaccinations/${petId}`
+        `${import.meta.env.VITE_API_URL}/api/vaccinations/${petId}`
       )
       const data = await response.json()
 
@@ -85,9 +85,9 @@ function Vaccinations({ user, onBack }) {
       notes: notes
     }
 
-    const url = editingId
-      ? `http://127.0.0.1:5000/api/vaccinations/${editingId}`
-      : 'http://127.0.0.1:5000/api/vaccinations'
+   const url = editingId
+  ? `${import.meta.env.VITE_API_URL}/api/vaccinations/${editingId}`
+  : `${import.meta.env.VITE_API_URL}/api/vaccinations`
 
     try {
       const response = await fetch(url, {
@@ -135,7 +135,7 @@ function Vaccinations({ user, onBack }) {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/api/vaccinations/${vaccinationId}`,
+        `${import.meta.env.VITE_API_URL}/api/vaccinations/${vaccinationId}`,
         { method: 'DELETE' }
       )
 

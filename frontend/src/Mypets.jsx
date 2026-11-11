@@ -18,7 +18,7 @@ function MyPets({ user, onBack }) {
   const loadPets = async () => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/api/pets/${ownerId}`
+        `${import.meta.env.VITE_API_URL}/api/pets/${ownerId}`
       )
       const data = await response.json()
 
@@ -59,10 +59,9 @@ function MyPets({ user, onBack }) {
     }
 
     try {
-      const url = editingPetId
-        ? `http://127.0.0.1:5000/api/pets/${editingPetId}`
-        : 'http://127.0.0.1:5000/api/pets'
-
+       const url = editingPetId
+           ? `${import.meta.env.VITE_API_URL}/api/pets/${editingPetId}`
+           : `${import.meta.env.VITE_API_URL}/api/pets`
       const response = await fetch(url, {
         method: editingPetId ? 'PUT' : 'POST',
         headers: {
@@ -114,7 +113,7 @@ function MyPets({ user, onBack }) {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/api/pets/${petId}`,
+        `${import.meta.env.VITE_API_URL}/api/pets/${petId}`,
         { method: 'DELETE' }
       )
 

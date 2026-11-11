@@ -10,7 +10,7 @@ function AdminDashboard({ user, onLogout }) {
   const loadUsers = async () => {
     try {
       const response = await fetch(
-        'http://127.0.0.1:5000/api/admin/users'
+        `${import.meta.env.VITE_API_URL}/api/admin/users`
       )
 
       const data = await response.json()

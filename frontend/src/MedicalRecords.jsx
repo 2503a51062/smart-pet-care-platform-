@@ -16,7 +16,7 @@ function MedicalRecords({ user, onBack }) {
   const loadPets = async () => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/api/pets/${user.user_id}`
+        `${import.meta.env.VITE_API_URL}/api/pets/${user.user_id}`
       )
       const data = await response.json()
 
@@ -38,7 +38,7 @@ function MedicalRecords({ user, onBack }) {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/api/medical-records/${petId}`
+        `${import.meta.env.VITE_API_URL}/api/medical-records/${petId}`
       )
       const data = await response.json()
 
@@ -86,10 +86,9 @@ function MedicalRecords({ user, onBack }) {
       record_date: recordDate
     }
 
-    const url = editingId
-      ? `http://127.0.0.1:5000/api/medical-records/${editingId}`
-      : 'http://127.0.0.1:5000/api/medical-records'
-
+   const url = editingId
+       ? `${import.meta.env.VITE_API_URL}/api/medical-records/${editingId}`
+       : `${import.meta.env.VITE_API_URL}/api/medical-records`
     try {
       const response = await fetch(url, {
         method: editingId ? 'PUT' : 'POST',
@@ -132,7 +131,7 @@ function MedicalRecords({ user, onBack }) {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/api/medical-records/${recordId}`,
+        `${import.meta.env.VITE_API_URL}/api/medical-records/${recordId}`
         { method: 'DELETE' }
       )
 

@@ -14,7 +14,7 @@ function Appointments({ user, onBack }) {
   const loadPets = async () => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/api/pets/${user.user_id}`
+        `${import.meta.env.VITE_API_URL}/api/pets/${user.user_id}`
       )
       const data = await response.json()
 
@@ -36,7 +36,7 @@ function Appointments({ user, onBack }) {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/api/appointments/${selectedPetId}`
+        `${import.meta.env.VITE_API_URL}/api/appointments/${selectedPetId}`
       )
       const data = await response.json()
 
@@ -69,8 +69,8 @@ function Appointments({ user, onBack }) {
 
     try {
       const url = editingId
-        ? `http://127.0.0.1:5000/api/appointments/${editingId}`
-        : 'http://127.0.0.1:5000/api/appointments'
+        ? `${import.meta.env.VITE_API_URL}/api/appointments/${editingId}`
+        : `${import.meta.env.VITE_API_URL}/api/appointments`
 
       const response = await fetch(url, {
         method: editingId ? 'PUT' : 'POST',
@@ -117,7 +117,7 @@ function Appointments({ user, onBack }) {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/api/appointments/${appointmentId}`,
+        `${import.meta.env.VITE_API_URL}/api/appointments/${appointmentId}`,
         { method: 'DELETE' }
       )
       const data = await response.json()

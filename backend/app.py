@@ -9,14 +9,17 @@ app = Flask(__name__)
 create_all_tables()
 
 
+
 # ---------------- CORS CONFIGURATION ----------------
 
 @app.after_request
 def add_cors_headers(response):
     origin = request.headers.get("Origin")
+
     allowed_origins = [
         "http://localhost:5173",
-        "http://localhost:5174"
+        "http://localhost:5174",
+        "https://smart-pet-care-platform-frontend.onrender.com"
     ]
 
     if origin in allowed_origins:
